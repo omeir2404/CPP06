@@ -2,27 +2,30 @@
 #define SERIALIZATION_HPP
 #include <string>
 #include <iostream>
-#include <sstream>
-#include <iomanip>
-#include <limits>
 
- struct Data
- 
- {
-    int member;
- };
- 
+#include <iostream>
+#include <cstring>
+#include <cstdio>
+#include <stdint.h>
+
+struct Data
+
+{
+    int number;
+    std::string word;
+};
 
 class Serialization
 {
-    private:
-        Serialization();
-    
-        
-    public:
-        ~Serialization();
-        uintptr_t serialize(Data* ptr);
-        Data* deserialize(uintptr_t raw);
+private:
+    Serialization();
+    Serialization(const Serialization &other);
+    Serialization &operator=(const Serialization &other);
+
+public:
+    ~Serialization();
+    static uintptr_t serialize(Data *ptr);
+    static Data *deserialize(uintptr_t raw);
 };
 
 #endif

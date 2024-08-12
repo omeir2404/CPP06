@@ -173,3 +173,15 @@ void ScalarConverter::convert(std::string input)
         std::cout << "double: out of range" << std::endl;
     }
 }
+
+ScalarConverter::ScalarConverter(const ScalarConverter& other)
+{
+}
+
+ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other)
+{
+    if (this != &other)
+    {
+    }
+    return *this;
+}
