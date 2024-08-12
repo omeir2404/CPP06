@@ -8,6 +8,8 @@ int main()
 
     uintptr_t serializedData = Serialization::serialize(&data);
 
+    std::cout << "serialized data " << serializedData << std::endl;
+
     Data* deserializedData = Serialization::deserialize(serializedData);
 
     std::cout << "number: " << deserializedData->number << " word: "<< deserializedData->word << std::endl;

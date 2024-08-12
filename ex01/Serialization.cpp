@@ -10,6 +10,7 @@ Serialization::~Serialization()
 
 Serialization::Serialization(const Serialization& other)
 {
+    *this = other;
 }
 
 Serialization& Serialization::operator=(const Serialization& other)
