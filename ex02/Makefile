@@ -1,8 +1,8 @@
-NAME    = serialize
+NAME    = Base
 
 CC = c++ -Wall -Werror -Wextra -std=c++98
 
-SRC     = Serialization.cpp main.cpp
+SRC     = Base.cpp main.cpp
 
 
 all:    $(NAME)
